@@ -5,7 +5,7 @@ sudo /usr/sbin/nginx -c /tmp/nginx-1.conf 2>&1 > /tmp/nginx-1.log
 
 sudo /usr/local/sbin/haproxy -D -f /tmp/haproxy.conf -p /tmp/haproxy.pid 2>&1 > /tmp/haproxy.log
 
-ab -c 1 -n 5000000 http://localhost:8080/ 2>&1 > /tmp/ab.out &
+ab -c 1 -n 10000 http://localhost:8080/ 2>&1 > /tmp/ab.out &
 
 c=0
 while true
